@@ -6,6 +6,9 @@ pipeline {
 }
 
     // build
+    environment {
+        GREETING = 'HELLO JENKINS'
+    }
     stages {
         stage('Build') {
             steps {
@@ -19,7 +22,9 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying...'
+                sh """
+                    echo "Here I wrote shell script"
+                """    
             }
         }
     }
