@@ -1,14 +1,17 @@
 pipeline {
     agent {
-    node {
-        label 'AGENT-1'
+        node {
+            label 'AGENT-1'
+        }
     }
-}
 
-    // build
     environment {
         GREETING = 'HELLO JENKINS'
     }
+     options {
+        timeout(time: 1, unit: 'SECONDS') 
+    }
+    // build
     stages {
         stage('Build') {
             steps {
