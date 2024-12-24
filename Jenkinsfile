@@ -40,7 +40,7 @@ pipeline {
                 sh """
                     echo "Here I wrote shell script"
                     echo "GREETING"
-                    #sleep 11
+                    #sleep 10
                 """    
             }
         }
